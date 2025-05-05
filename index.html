@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Хто літає?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      text-align: center;
+      padding: 50px;
+    }
+    table {
+      width: 50%;
+      margin: auto;
+      border-collapse: collapse;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 15px;
+      font-size: 18px;
+      text-align: left;
+    }
+    th {
+      background-color: #990000;
+      color: #fff;
+    }
+    input[type="radio"] {
+      margin-right: 10px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #990000;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      display: block;
+      margin: 20px auto;
+    }
+    button:hover {
+      background-color: #cc0000;
+    }
+  </style>
+  <script type="text/javascript">
+    function checkAnswer() {
+      var radios = document.getElementsByName('answer');
+      var userAnswer = '';
+      
+      for (var i = 0; i < radios.length; i++) {
+        if (radios[i].checked) {
+          userAnswer = radios[i].value;
+          break;
+        }
+      }
+      
+      if (userAnswer === '') {
+        alert("Оберіть відповідь!");
+        return;
+      }
+      
+      if (userAnswer === "ptakh") {
+        alert("Вірно!");
+      } else {
+        alert("Невірно. Правильна відповідь: Птах.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <table>
+    <tr>
+      <th colspan="2">Хто літає?</th>
+    </tr>
+    <tr>
+      <td><input type="radio" name="answer" value="ptakh"> Птах</td>
+    </tr>
+    <tr>
+      <td><input type="radio" name="answer" value="lyudyna"> Людина</td>
+    </tr>
+    <tr>
+      <td><input type="radio" name="answer" value="ryba"> Риба</td>
+    </tr>
+  </table>
+  <button onclick="checkAnswer()">Перевірити</button>
+</body>
+</html>echo "# Pr6_3" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Kotagas/Pr6_3.git
+git push -u origin main
